@@ -141,3 +141,4 @@ let padend = text.padEnd(5,"0");    // from ending.
 
 console.log(padend);
 
+
