@@ -107,7 +107,7 @@ switch (dayName) {
         break ;    
 }
 
-console.log("The dayName is : " + dayName) ;
+//console.log("The dayName is : " + dayName) ;
 
 
 // Ternary operator ;
@@ -116,7 +116,7 @@ console.log("The dayName is : " + dayName) ;
 
 let age = 20 ;
 let msg = (age >= 18) ? "Adult" : "Minor";
-console.log(msg);
+//console.log(msg);
 
 // ---------- JavaScript Loops ----------- in programming loops are used to repeat a block of code!
 
@@ -127,7 +127,7 @@ for (let i = 1 ; i <= 5 ; i++){
 }
 
 for (let i = 2 ; i <= 6 ; i++){
-    console.log(i);
+    //console.log(i);
 }
 
 // Looping through Arrays----->
@@ -135,7 +135,7 @@ for (let i = 2 ; i <= 6 ; i++){
 let Coding = ["JavaScript","Python","C++"]
 
 for (let i = 0 ; i < Coding.length ; i++){
-    console.log(Coding[i]);
+    //console.log(Coding[i]);
 }
 
 // Nested Loops through Arrays ------>
@@ -156,7 +156,7 @@ while(condition){
 
 let i = 0 ;
 while (i <= 5){
-    console.log(i);
+    //console.log(i);
     i++ ;
 }
 
@@ -167,17 +167,17 @@ while (i <= 5){
 let Ai = 1;
 
 do{
-    console.log(Ai)
+    //console.log(Ai)
     Ai++
 }while (Ai <= 5);
 
-// break statement ---- used for terminate the loop at specified condtion !
+// break statement ---- used for terminate the loop at specified iteration!
 
 for (let a = 1 ; a <= 8 ; a++){
     if(a == 3){                            // loop will be break at 3 ;
         break ;
     }
-    console.log(a);
+    //console.log(a);
 }
 
 /* continue statement ------- it used to skip the current iteration of the 
@@ -187,5 +187,82 @@ for (let b = 1 ; b <= 8 ; b++){
     if (b == 4){                         // it skips the 4 and prints remaining values;
         continue;
     }
-    console.log(b);
+    //console.log(b);
 }
+
+
+// examples for ---> if,else and else if ;
+
+let hour = new Date().getHours();
+
+if (hour < 24) {
+    greeting = "Good day!";
+}
+//console.log(greeting);
+
+
+if (hour < 20) {
+    greeting = "Good Day!";
+}else {
+    greeting = "Good Evening!";
+}
+
+console.log(greeting);
+
+
+
+const time = new Date().getHours();
+let greetings;
+
+if (time < 10) {
+    greetings = "Good Morning!";
+}else if (time < 20) {
+    greetings = "Good Day!";
+}else{
+    greetings = "Good Afternoon!";
+}
+console.log(greetings);
+
+// default Keyword ; --> the default keyword specifies the code to run if there is no case match ;
+
+/*Common code blocks;
+some times you will want different switch cases to use the same code; */ 
+
+switch (new Date().getDay()){
+    case 4 :
+    case 5 :
+        text = "Soon it is weekend!";
+        break;
+    case 6 :
+    case 7 :
+        text = "it is weekend!";
+        break;
+    default:
+        text = "Looking for weekend!";                     
+}
+
+console.log(text);
+
+// Switch case --> examples ; if no matching cases are found,the program continues to the default label;
+let x  = "0";
+switch (x) {
+    case 0 :
+        text = "Off";
+        break;
+    case 1 :
+        text = "On";
+    default :
+        text = "No Value found!";        
+}
+console.log(text);
+
+//Array looping ;
+
+const Cars = ["Volvo","Saab","Ford","Audi","KIA"];
+let text01 = " ";
+
+for (let i = 0; i < Cars.length; i++) {
+    text01 += Cars[i]
+}
+console.log(text01);
+
