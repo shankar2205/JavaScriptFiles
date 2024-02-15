@@ -266,3 +266,170 @@ for (let i = 0; i < Cars.length; i++) {
 }
 console.log(text01);
 
+//  we can initiate many values in expression 1. (Separated by comma);
+let j, len, text02 ;
+
+for ( j = 0, len = Cars.length, text02 = ' '; j < len ; j++) {
+    text02 += Cars[j] + " ";
+}
+console.log(text02);
+
+// example 02  ---> we can omit expression 1
+// like when your values are declared before the loops starts;
+
+let ij = 2;
+let len01 = Cars.length;
+let text03 = " ";
+
+for (;ij < len01; ij++) {
+    text03 += Cars[ij] + " ";
+}
+                                     // this returns values from 2 to rest of index;
+console.log(text03);
+
+// example 3 ;
+
+const fruits = ["Pears","Leaches","Straberry","Apple","Banana","Grapes"];
+
+let Ab = 0;
+let len02 = fruits.length;
+let text04 = ' ';
+
+for (;Ab < len02; ){
+    text04 += fruits[Ab] + " ";
+    Ab++ ;
+}
+console.log(text04);
+
+console.log(fruits);
+
+// for in Loop ; --> this statement loops through the properties of an object;
+
+/* Syntax : 
+for (key in object){
+    code to be executed ;
+} */
+
+const person = {fname:"Shankar",lname:"Naidu",age:23};    // object created!
+
+let txt = " ";
+for (let x in person){
+    txt += person[x] + " ";
+}
+
+console.log(txt);
+
+// for in over arrays ;
+/* Syntax :
+for (var in array){
+    code to be executed ;
+} */
+
+const Numbers = [45,49,23,10,40,5];
+let text05 = " ";
+for (let x in Numbers){
+    text05 += Numbers[x] + " ";
+}
+console.log(text05);
+
+// Array.forEach(); --> this method calls a function (call back function) once for each array element.
+
+let text06 = " ";
+Numbers.forEach(myFunction);
+function myFunction(value){
+    text06 += value + " ";
+}
+console.log(text06);
+
+// The for of loop ; ---> this statement loops through the values of an iterable object ;
+
+/* Syntax :                     --> iterable : An object that has iterable properties ;
+for (Var of iterable){
+    code to be executed.
+} */  
+
+// looping over array ;
+
+let texts = " " ;
+for (let x of fruits){
+    texts += x + " ";
+}
+console.log(texts);
+
+// looping over string ;
+let Lang = "JavaScript";
+let txts = " ";
+
+for (let x of Lang){
+    txts += x + " ";
+}
+
+console.log(txts);
+
+// while loop : Loops can execute as long as a specified condition is true ;
+
+/* Syntax : 
+while(condition) {
+    code to be executed
+}  */
+
+// print 0 to 10 numbers by using while loop ;
+
+let oy = 0 ;
+let txt01 = " ";
+
+while(oy < 10){
+    txt01 += oy + " ";
+    oy++ ;
+}
+console.log(txt01);
+
+// do while..loop ; the loop will always be executed at least once,
+//even if condition is false , because
+// the code block is executed before the condition is tested ;
+
+let text07 = " " ;
+let ji = 0 ;
+
+do{
+    text07 += ji + " ";
+    ji++ ;
+}
+while(ji < 5);             // if the condition is true it will print the output, if false it will ji value as out put ;
+
+console.log(text07); 
+
+// Javscript break statement ; it terminate the loop ;
+
+let text08 = " ";
+
+for(let ig = 0 ; ig < 10; ig++){
+    if (ig === 4) {break}; 
+    text08 += ig + " ";
+}
+console.log(text08);    
+
+/*Javascript labels --> break label -- the break statement with label reference,
+the statement cane be used to jump out of any code block*/
+
+let str = " ";
+list : {
+    str += fruits[0] + " ";
+    str += fruits[1] + " ";
+    break list ;
+    str += fruits[2] + " ";
+    str += fruits[3] + " ";
+}
+
+console.log(str);
+
+// javascript continue statement ; ---> this returns excluding the specified iteration and prints remaining;
+
+let text09 = " ";
+
+for(let tr = 0; tr < 10; tr++){
+    if(tr === 5) {continue}
+    text09 += tr + " ";
+}
+
+console.log(text09);
